@@ -23,7 +23,7 @@ public class Gaulois {
 	}
     public void boirePotion(int forcePotion) {
 		effetPotion=forcePotion;
-		System.out.println("Merci druide je sens que ma force est"+ " "+effetPotion+" "+"décuplé!");
+		System.out.println("Merci druide je sens que ma force est"+ " "+effetPotion+" "+"dÃ©cuplÃ©!");
 	}
 	public void parler(String texte) {
 		System.out.println(prendreParole()+"<<"+ texte+">>");
