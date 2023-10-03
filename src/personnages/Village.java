@@ -16,8 +16,8 @@ public class Village {
 		this.chef = chef;
 		}
 
-	public Gaulois trouverHabitant(int numéro) {
-		return villageois[numéro];
+	public Gaulois trouverHabitant(int numero) {
+		return villageois[numero];
 	}
 	
 	public void afficherVillageois(Chef chef) {
@@ -29,7 +29,7 @@ public class Village {
 	
 	public void ajouterHabitants(Gaulois gaulois) {
 		villageois[nbVillageois]=gaulois;
-		nbVillageois+=1;
+		nbVillageois++;
 	}
 
 	public String getNom() {
@@ -37,7 +37,7 @@ public class Village {
 	}
     
 	public static void main(String[] args) {
-		Village village=new Village("Village des Irréductible",30);
+		Village village=new Village("Village des Irreductible",30);
 //		Gaulois gaulois=village.trouverHabitant(30);
 //		On obtient l'execption préceedente car on demande à avoir accèes à un élément en dehors du tableau car les élements du tableau vont de 0 à 29 tandis que 30 est la taille du tableau et donc ne peut pas être un indice de ce dernier
 //		Chef abaracourcix = new Chef("abaracourcix",6,village);
@@ -48,10 +48,10 @@ public class Village {
 //		System.out.println(gaulois);
 //		On obtient null car asterix sera à l'indice 0 et non pas 1
 		Chef abaracourcix = new Chef("abaracourcix",6,village);
-		Gaulois astérix=new Gaulois("astérix",8);
-		village.ajouterHabitants(astérix);
-		Gaulois obélix=new Gaulois("obelix",25);
-     	village.ajouterHabitants(obélix);
+		Gaulois asterix=new Gaulois("asterix",8);
+		village.ajouterHabitants(asterix);
+		Gaulois obelix=new Gaulois("obelix",25);
+     	village.ajouterHabitants(obelix);
      	village.afficherVillageois(abaracourcix);		
 	}
 	

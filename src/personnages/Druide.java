@@ -27,21 +27,22 @@ public class Druide {
 	
 	public void preparerPotion() {
 		Random random = new Random();
-		int forcePotionPrepared=random.nextInt(effetPotionMax);
+		int forcePotionPrepared=random.nextInt(effetPotionMax-effetPotionMin+1)+effetPotionMin;
 		if (forcePotionPrepared>7) {
-			System.out.println("J'ai pr�parer une super potion de force :"+ " "+forcePotionPrepared);
-			forcePotion=forcePotionPrepared;
+			System.out.println("J'ai preparer une super potion de force :"+ " "+forcePotionPrepared);
+			
 		}
 		else {
-			System.out.println("Je n'ai pas trouv� tous les ingr�dients ma potion est seulement de force :"+ " "+forcePotionPrepared);
-			forcePotion=forcePotionPrepared;
+			System.out.println("Je n'ai pas trouve tous les ingr�dients ma potion est seulement de force :"+ " "+forcePotionPrepared);
+			
 		}
+		forcePotion=forcePotionPrepared;
 	}
 	
 	
 	public void booster(Gaulois gaulois) {
-		if (gaulois.getNom()=="Obélix") {
-			System.out.println("Non Obélix!...Tu n'auras pas de potion");
+		if (gaulois.getNom()=="Obelix") {
+			System.out.println("Non Obelix!...Tu n'auras pas de potion");
 		}
 		else {
 			gaulois.boirePotion(forcePotion);
