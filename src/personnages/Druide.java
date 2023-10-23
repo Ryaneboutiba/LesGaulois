@@ -27,15 +27,14 @@ public class Druide {
 	
 	public void preparerPotion() {
 		Random random = new Random();
-		int forcePotionPrepared=random.nextInt(effetPotionMax);
+		int forcePotionPrepared=random.nextInt(effetPotionMax-effetPotionMin+1)+effetPotionMin;
 		if (forcePotionPrepared>7) {
 			System.out.println("J'ai pr�parer une super potion de force :"+ " "+forcePotionPrepared);
-			forcePotion=forcePotionPrepared;
 		}
 		else {
 			System.out.println("Je n'ai pas trouv� tous les ingr�dients ma potion est seulement de force :"+ " "+forcePotionPrepared);
-			forcePotion=forcePotionPrepared;
 		}
+		forcePotion=forcePotionPrepared;
 	}
 	
 	
