@@ -36,6 +36,7 @@ import personnages.Romain;
 public class Scenario {
 
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		Druide druide = new Druide("Panoramix", 5, 10);
 		druide.parler("Je vais aller préparer une petite potion...");
 		druide.preparerPotion();
@@ -64,6 +65,23 @@ public class Scenario {
 //		Musee musee = new Musee();
 //		asterix.faireUneDonnation(musee);
 
+=======
+		Gaulois asterix=new Gaulois("asterix",8);
+		Gaulois obelix=new Gaulois("Ob�lix",25);
+		Druide panoramix=new Druide("panoramix",10,5);
+		Romain minus=new Romain("minus",6);
+		panoramix.parler("Bonjour, je suis le druide "+panoramix.getNom()+" et ma potion peut aller d'une force de "+panoramix.getEffetPotionMin()+" à "+panoramix.getEffetPotionMax()+" .");
+		panoramix.parler("Je vais aller preparer ma potion .");
+		panoramix.preparerPotion();
+		panoramix.booster(obelix);
+		obelix.parler("Par Bablanos, ce n'est pas juste!");
+		panoramix.booster(asterix);
+		asterix.parler("Bonjour !");
+		minus.parler("UN GAU...GAUGAU...");
+		do {
+		asterix.frapper(minus);
+	}while (minus.getForce()>0);
+>>>>>>> ccd595be2230358b9a5f8dfbe16b6300dfd12fcd
 	}
 
 }
